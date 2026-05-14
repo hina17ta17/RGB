@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- タイトル -->
+        <div class="header">
+            <h1>RGB Color Simulator</h1>
+        </div>
+
+        <!-- メインコンテンツ（左右分割） -->
+        <div class="main-content">
+            <!-- 左側：カラープレビュー -->
+            <div class="left-section">
+                <div class="preview-section">
+                    <div class="color-preview" id="colorPreview"></div>
+                </div>
+            </div>
+
+            <!-- 右側：スライダーと情報 -->
+            <div class="right-section">
+                <!-- 表示情報 -->
+                <div class="info-section">
+                    <div class="info-box">
+                        <p class="info-label">RGB値</p>
+                        <p class="info-value" id="rgbDisplay">RGB(128, 128, 128)</p>
+                    </div>
+                    <div class="info-box">
+                        <p class="info-label">HEXコード</p>
+                        <p class="info-value hex-copy" id="hexDisplay">#808080</p>
+                    </div>
+                </div>
+
+                <!-- スライダーセクション -->
+                <div class="slider-section">
+                    <!-- Red Slider -->
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <label for="redSlider" class="slider-label">Red</label>
+                            <span class="slider-value" id="redValue">128</span>
+                        </div>
+                        <input type="range" id="redSlider" class="slider red-slider" min="0" max="255" value="128">
+                        <div class="slider-track-bg red-track"></div>
+                    </div>
+
+                    <!-- Green Slider -->
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <label for="greenSlider" class="slider-label">Green</label>
+                            <span class="slider-value" id="greenValue">128</span>
+                        </div>
+                        <input type="range" id="greenSlider" class="slider green-slider" min="0" max="255" value="128">
+                        <div class="slider-track-bg green-track"></div>
+                    </div>
+
+                    <!-- Blue Slider -->
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <label for="blueSlider" class="slider-label">Blue</label>
+                            <span class="slider-value" id="blueValue">128</span>
+                        </div>
+                        <input type="range" id="blueSlider" class="slider blue-slider" min="0" max="255" value="128">
+                        <div class="slider-track-bg blue-track"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ボタンセクション -->
+        <div class="button-section">
+            <button class="btn btn-random" id="randomBtn">Random Color</button>
+        </div>
+
+        <!-- プリセットカラー -->
+        <div class="preset-section">
+            <p class="preset-label">Preset Colors</p>
+            <div class="preset-buttons">
+                <button class="preset-btn" data-color="255,0,0">Red</button>
+                <button class="preset-btn" data-color="0,255,0">Green</button>
+                <button class="preset-btn" data-color="0,0,255">Blue</button>
+                <button class="preset-btn" data-color="255,255,255">White</button>
+                <button class="preset-btn" data-color="0,0,0">Black</button>
+                <button class="preset-btn" data-color="255,255,0">Yellow</button>
+                <button class="preset-btn" data-color="128,0,128">Purple</button>
+                <button class="preset-btn" data-color="0,255,255">Cyan</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
