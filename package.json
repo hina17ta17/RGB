@@ -1,0 +1,14 @@
+{
+  "name": "rgb-color-simulator",
+  "private": true,
+  "description": "RGB Color Simulator (server version for Cloud Run, protected by AgentGuard)",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}

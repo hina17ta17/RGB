@@ -1,0 +1,9 @@
+# Files not uploaded by `gcloud run deploy --source .`
+.gcloudignore
+.git
+.gitignore
+#!include:.gitignore
+
+# Local / GitHub Pages-only files (the server serves only its own page files)
+.nojekyll
+/*.txt
